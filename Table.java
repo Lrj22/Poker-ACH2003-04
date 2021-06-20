@@ -102,6 +102,7 @@ public class Table {
 
 	// Método que retorna se há (2 pares) OU (1 par e 1 trinca)
 	private boolean isTwoPair(Card[] cards) {
+		// variável que contabiliza quantas comparações entre pares são diferentes
 		int cont = 0;
 		for (int i = 1; i < cards.length; i++) {
 			if (cards[i - 1].getRank() != cards[i].getRank())
@@ -112,6 +113,8 @@ public class Table {
 	}
 
 	private boolean isPair(Card[] cards) {
+		// Como este método será chamado por último, caso identifique uma carta com
+		// mesmo rank podemos já assumir que é um par
 		for (int i = 1; i < cards.length; i++) {
 			if ((cards[i - 1].getRank() + 1) == cards[i].getRank())
 				return true;
@@ -119,6 +122,7 @@ public class Table {
 		return false;
 	}
 
+	// Método que apenas testa a classificação de 5 cartas
 	public String individualTest(String cardsString) {
 
 		Player p = new Player(cardsString);
