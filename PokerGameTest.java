@@ -19,7 +19,7 @@ public class PokerGameTest {
     String test2Result;
 
     @Before
-    public void setup(){
+    public void setup() {
 
         table = new Table();
 
@@ -34,13 +34,13 @@ public class PokerGameTest {
     public Timeout timeout = new Timeout(5, TimeUnit.SECONDS);
 
     @Test
-    public void test1(){
+    public void test1() {
 
         assertEquals(test1Result, table.individualTest(test1));
     }
 
     @Test
-    public void test2(){
+    public void test2() {
 
         assertEquals(test2Result, table.individualTest(test2));
     }
