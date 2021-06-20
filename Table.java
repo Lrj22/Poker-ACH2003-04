@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Table {
@@ -46,7 +47,7 @@ public class Table {
 		return 1;
 	}
 
-	private boolean isRoyalFlush(Card[] cards) {
+	private boolean isRoyalFlush(Card[] cards){
 
 		return cards[0].getRank() == 14 && isStraightFlush(cards);
 	}
@@ -85,17 +86,11 @@ public class Table {
 
 		return true;
 	}
-
-	private boolean isThreeKind(Card[] cards) {
-		int cont = 0;
-		for (int i = 1; i < cards.length; i++) {
-			if (cards[i - 1].getRank() == cards[i].getRank())
-				cont++;
-			else {
-				if (cont == 3)
-					return true;
-				cont = 0;
-			}
+  
+  private boolean isThreeKind(Card[] cards) {
+		for(int i = 1; i < cards.length; i++) {
+			if(cards[i-1].getRank() == cards[i].getRank() && cards[i-1].getRank() == cards[i+1].getRank())
+				return true;
 		}
 		return false;
 	}
@@ -168,5 +163,4 @@ public class Table {
 	private void sortCards(Card[] cards) {
 		quicksort(cards, 0, cards.length - 1);
 	}
-
 }
