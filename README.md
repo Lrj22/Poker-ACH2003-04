@@ -38,6 +38,8 @@ Os métodos são:
 - defineHand chama os métodos que identificam cada uma das mãos do poker
 - isRoyalFlush, isStraightFlush, isFourKind, isFullHouse, isFlush, isStraight, isThreeKind, isTwoPair, isPair
 - individualTest imprime as 5 cartas testadas e a sua respectiva classificação
+- sortCards é o método que ordena da maior carta para a menor carta. Ela utiliza o algoritmo Quicksort. Para isso ela utiliza os métodos:
+  - Quicksort, trocaValorEntreCards, particiona
 
 ## Contribuidores
 
