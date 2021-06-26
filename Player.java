@@ -1,41 +1,49 @@
 public class Player {
 
-	private Card[] cards;
-	private int handIndex;
-	
-	public Player(String strCards){
+    private Card[] cards;
+    private int handIndex;
 
-		String[] arrStrCards = strCards.split(" ");
-		cards = new Card[arrStrCards.length];
+    public Player(String strCards){
+        this.cards = montaCartas(strCards);
+        this.handIndex = 0;
+    }
 
-		for(int i = 0; i < cards.length; i++)
-			cards[i] = new Card(arrStrCards[i]);
+    public Card[] getCards(){
 
-		this.handIndex = 0;
-	}
+        return this.cards;
+    }
 
-	public Card[] getCards(){
+    public int getHandIndex(){
 
-		return this.cards;
-	}
+        return this.handIndex;
+    }
 
-	public int getHandIndex(){
+    public void setCards(String strCards){
+      this.cards = montaCartas(strCards);
+    }
 
-		return this.handIndex;
-	}
+    public Card[] montaCartas(){
+        String[] arrStrCards = strCards.split(" ");
+        Card[] auxCards = new Card[arrStrCards.length];
 
-	public void setHandIndex(int handIndex){
+        for(int i = 0; i < cards.length; i++)
+            auxCards[i] = new Card(arrStrCards[i]);
 
-		this.handIndex = handIndex;
-	}
+        return auxCards;
+    }
+    
+    public void setHandIndex(int handIndex){
 
-	public String toString(){
+        this.handIndex = handIndex;
+    }
 
-		String result = "";
+    public String toString(){
 
-		for(Card card : cards)
-			result += card + " ";
+        String result = "";
 
-		return result;
-	}
+        for(Card card : cards)
+            result += card + " ";
+
+        return result;
+    }
 }
