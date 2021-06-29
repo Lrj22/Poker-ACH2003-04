@@ -49,3 +49,4 @@ Os métodos são:
 - Fábio Yamada - 5690619 - fabioheiji
 - Silas Bovolin Reis  - 11796739 - SilasReisUSP
 - Felipe Oliveira - 11925242 - felipeoes
+- Leandro Júnior Lins Hawrysz - 11796253 - Lrj22
